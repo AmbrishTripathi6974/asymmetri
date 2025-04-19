@@ -40,8 +40,8 @@ fi
 echo -e "${GREEN}Running flutter doctor...${NC}"
 flutter doctor
 
-echo -e "${GREEN}Getting dependencies...${NC}"
-flutter pub get
+# echo -e "${GREEN}Getting dependencies...${NC}"
+# flutter pub get
 
 echo -e "${GREEN}Building Flutter web project...${NC}"
 flutter build web
