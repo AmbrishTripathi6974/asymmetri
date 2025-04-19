@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-FLUTTER_VERSION="3.19.6"
+# Update this Flutter version to match your SDK constraint
+FLUTTER_VERSION="3.22.1"
 FLUTTER_DIR="flutter"
 
 echo "📁 Current directory: $(pwd)"
@@ -27,7 +28,7 @@ git config --global --add safe.directory "$PWD/flutter"
 echo "🚀 Flutter version:"
 flutter --version
 
-# Get dependencies
+# Avoid running as root if possible (Vercel usually isn’t root anyway)
 echo "📦 Running flutter pub get..."
 flutter pub get
 
