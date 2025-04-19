@@ -21,6 +21,7 @@ echo "🚀 Flutter version:"
 flutter --version
 
 # Get dependencies
+git config --global --add safe.directory "$(pwd)/flutter"
 echo "📦 Running flutter pub get..."
 flutter pub get
 
