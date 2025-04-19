@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/my_controller.dart';
 import '../data/my_data.dart';
+import '../functions/my_functions.dart';
 
 class ColorDropdown extends StatelessWidget {
   const ColorDropdown({super.key});
@@ -11,8 +12,8 @@ class ColorDropdown extends StatelessWidget {
     final controller = Get.put(MainController());
 
     return Obx(() => Container(
-          width: 280,
-          height: 60,
+          width: MyFunctions.getResponsiveWidth(context, 0.2), // 70% of screen width
+          height: MyFunctions.getResponsiveHeight(context, 0.08), // 8% of screen height
           padding: const EdgeInsets.symmetric(horizontal: 16),
           decoration: BoxDecoration(
             color: const Color(0xFFede9f0),

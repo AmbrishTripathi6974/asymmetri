@@ -19,6 +19,7 @@ class InputFields extends StatelessWidget {
                   controller.validateTotalItems(value, context),
               errorText: controller.totalItemsError.value,
               color: controller.currentColor,
+              context: context,
             ),
             const SizedBox(height: 12),
             _buildField(
@@ -28,6 +29,7 @@ class InputFields extends StatelessWidget {
                   controller.validateItemsInLine(value, context),
               errorText: controller.itemsInLineError.value,
               color: controller.currentColor,
+              context: context,
             ),
           ],
         ));
@@ -39,9 +41,11 @@ class InputFields extends StatelessWidget {
     required void Function(String) onChanged,
     required Color color,
     String? errorText,
+    required BuildContext context,
   }) {
     return SizedBox(
-      width: 280,
+      width:
+          MyFunctions.getResponsiveWidth(context, 0.19),
       child: TextFormField(
         controller: controller,
         onChanged: onChanged,
