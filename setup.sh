@@ -2,7 +2,7 @@
 set -e
 
 # Make sure this version matches Dart 3.6.2 or higher
-FLUTTER_VERSION="3.22.1"
+FLUTTER_VERSION="3.29.3"
 FLUTTER_DIR="flutter"
 
 echo "📁 Current directory: $(pwd)"
